@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<div class="container">
+    <center><h3 style="color:#eee;">Entre votre login et Password</h3></center>
+    <div class="card card-container">
+        <p class="profile-name-card"></p>
+        <center>
+            <form class="form-signin" method="post">
+                <span class="reauth-email"></span>
+                <input type="email" name="email" class="form-control" placeholder="adresse mail" required autofocus><br /><br />
+                <input type="password" name="MotDePasse" class="form-control" placeholder="mot de passe" required>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Se souvenir de moi
+                    </label>
+                </div>
+                <input class="btn btn-lg btn-primary btn-block btn-signin" type="submit" value="Se connecter">
+            </form>
+            <a href="#" class="forgot-password">
+                Mot de pass oublié ?
+            </a>
+        </center>
+    </div>
+</div>
