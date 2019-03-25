@@ -13,6 +13,11 @@ namespace CalculPartsHeritage.Controllers
             return View();
         }
 
+        public ActionResult _Bibliotheque()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
            

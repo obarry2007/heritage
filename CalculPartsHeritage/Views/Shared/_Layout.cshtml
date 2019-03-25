@@ -15,7 +15,9 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Heritage</a>
+            <span class="navbar-brand js-scroll-trigger">
+                @Html.ActionLink("Heritage", "Index")
+            </span>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
@@ -23,19 +25,21 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#about">Imam Malicke</a>
+                        <a class="nav-link js-scroll-trigger" href="http://islamsunnite.net/biographie-imam-malik/">Imam Malicke</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#projects">Imam Bouhary</a>
+                        <a class="nav-link js-scroll-trigger" href="http://islamsunnite.net/biographie-imam-al-boukhari/">Imam Boukhari</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#signup">Imam Shafy</a>
+                        <a class="nav-link js-scroll-trigger" href="http://khadijamine.centerblog.net/13797-biographie-de-imam-ash-shafi-i">Imam Shafy</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#signup">Imam Ahmad</a>
+                        <a class="nav-link js-scroll-trigger" href="https://www.apbif.fr/imam-ahmad-biographie/">Imam Ahmad</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#signup">Accord des 4 imams</a>
+                        <span class="nav-link js-scroll-trigger">
+                            @Html.ActionLink("Heritage", "_Index", "User")
+                        </span>
                     </li>
                 </ul>
             </div>
@@ -48,7 +52,9 @@
             <div class="mx-auto text-center">
                 <h1 style="color: #64a19d !important;" class="mx-auto my-0 text-uppercase">LES HERITAGES</h1>
                 <h2 class="text-white-50 mx-auto mt-2 mb-5">En Islam suivant les Imams</h2>
-                <a href="#about" class="btn btn-primary js-scroll-trigger">Decouvrer</a>
+                <span class="btn btn-warning js-scroll-trigger" color:#000000 ;">
+                    @Html.ActionLink("Bibliotheque", "_Bibliotheque")
+                </span>
             </div>
         </div>
     </header>
@@ -56,14 +62,15 @@
 
     <div class="container body-content">
         @RenderBody()
-        <!-- Footer -->
-        <footer class="bg-black small text-center text-white-50">
-            <div class="container">
-                Copyright &copy; Your Website 2019
-            </div>
-        </footer>
-    </div>
 
+    </div>
+    <!-- Footer-->
+    <br />
+    <footer class="bg-black small text-center text-white-50">
+        <div class="container">
+            Copyright &copy; Your Website 2019
+        </div>
+    </footer>
     <script src="~/Scripts/js/jquery.min.js"></script>
     <script src="~/Scripts/js/bootstrap.bundle.min.js"></script>
 
@@ -73,6 +80,6 @@
     <!-- Custom scripts for this template -->
     <script src="~/Scripts/js/grayscale.min.js"></script>
 
-    
+
 </body>
 </html>
