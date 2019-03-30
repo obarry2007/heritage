@@ -61,5 +61,73 @@ namespace CalculPartsHeritage.Controllers
             //PopulateDepartmentsDropDownList(course.DepartmentID);
             return View(utilisateur);
         }
+
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            UTILISATEUR user = db.UTILISATEURs.Find(id);
+            if (user == null)
+            {
+                return HttpNotFound();
+            }
+           
+            return View(user);
+        }
+
+        [HttpPost, ActionName("Edit")]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditPost(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var userToUpdate = db.UTILISATEURs.Find(id);
+            if (TryUpdateModel(userToUpdate, "",
+               new string[] { "UTILISATEURID", "EMAIL", "DESIGNATION" }))
+            {
+                try
+                {
+                    db.SaveChanges();
+
+                    return RedirectToAction("_Index");
+                }
+                catch (RetryLimitExceededException /* dex */)
+                {
+                    //Log the error (uncomment dex variable name and add a line here to write a log.
+                    ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists, see your system administrator.");
+                }
+            }
+            return View(userToUpdate);
+        }
+
+        // GET: Course/Delete/5
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            UTILISATEUR user = db.UTILISATEURs.Find(id);
+            if (user == null)
+            {
+                return HttpNotFound();
+            }
+            return View(user);
+        }
+
+        // POST: Course/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            UTILISATEUR user = db.UTILISATEURs.Find(id);
+            db.UTILISATEURs.Remove(user);
+            db.SaveChanges();
+            return RedirectToAction("_Index");
+        }
     }
 }

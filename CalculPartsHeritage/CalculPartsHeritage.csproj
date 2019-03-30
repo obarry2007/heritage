@@ -149,6 +149,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Models\AYANTDROIT.cs">
       <DependentUpon>BD_calcPartHeri.tt</DependentUpon>
     </Compile>
@@ -195,10 +202,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\animate.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.min.js" />
     <Content Include="Content\css\bootstrap-grid.css" />
     <Content Include="Content\css\bootstrap-grid.min.css" />
     <Content Include="Content\css\bootstrap-reboot.css" />
@@ -209,13 +218,27 @@
     <Content Include="Content\css\grayscale.min.css" />
     <Content Include="Content\grayscale.css" />
     <Content Include="Content\grayscale.min.css" />
+    <Content Include="Content\hamburgers.css" />
+    <Content Include="Content\hamburgers.min.css" />
+    <Content Include="Content\images\avatar-01.jpg" />
     <Content Include="Content\images\bg-masthead.jpg" />
     <Content Include="Content\images\bg1.jpg" />
+    <Content Include="Content\images\img-01.jpg" />
     <Content Include="Content\images\ipad.png" />
+    <Content Include="Content\jquery-3.2.1.min.js" />
+    <Content Include="Content\main.css" />
+    <Content Include="Content\main.js" />
+    <Content Include="Content\popper.js" />
+    <Content Include="Content\select2.css" />
+    <Content Include="Content\select2.js" />
+    <Content Include="Content\select2.min.css" />
+    <Content Include="Content\select2.min.js" />
+    <Content Include="Content\util.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Login.aspx" />
     <Content Include="Models\BD_calcPartHeri.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>BD_calcPartHeri.Context.cs</LastGenOutput>
@@ -269,7 +292,9 @@
     <Content Include="Scripts\js\jquery.slim.js" />
     <Content Include="Scripts\js\jquery.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -294,6 +319,8 @@
     <Content Include="Views\Home\_Bibliotheque.cshtml" />
     <Content Include="Views\User\_Index.cshtml" />
     <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

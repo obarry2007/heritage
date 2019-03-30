@@ -14,12 +14,13 @@ namespace CalculPartsHeritage.Models
     
     public partial class UTILISATEUR
     {
+       
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public UTILISATEUR()
         {
             this.AYANTDROITs = new HashSet<AYANTDROIT>();
         }
-    
+        
         public int UTILISATEURID { get; set; }
         public string DESIGNATION { get; set; }
         public string EMAIL { get; set; }
